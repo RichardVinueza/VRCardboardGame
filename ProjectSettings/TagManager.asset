@@ -11,6 +11,7 @@ TagManager:
   - Pass
   - GoodCoin
   - Start
+  - Win
   layers:
   - Default
   - TransparentFX

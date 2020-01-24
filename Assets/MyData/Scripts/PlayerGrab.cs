@@ -29,26 +29,26 @@ public class PlayerGrab : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             
-            if (!inHands && myHand.GetComponent<Grab>().canGrab )
-            {
-                ballCol.isTrigger = true; 
-                ball.transform.SetParent(myHand.transform);
-                ball.transform.localPosition = new Vector3(0, -.672f, 0f);
-                ballRb.velocity = Vector3.zero;
-                ballRb.useGravity = false;
-                inHands = true;
-            }
-            else if(inHands)
-            {
-                ballCol.isTrigger = false ;
-                ballRb.useGravity = true; 
-                this.GetComponent<PlayerGrab>().enabled = false;
-                ball.transform.SetParent(null);
-                //ball.transform.localPosition = ballOriginalPosition;
-                ballRb.velocity = cam.transform.rotation * Vector3.forward * handPower;
-                inHands = false;
+            //if (!inHands && myHand.GetComponent<Grab>().canGrab )
+            //{
+            //    ballCol.isTrigger = true; 
+            //    ball.transform.SetParent(myHand.transform);
+            //    ball.transform.localPosition = new Vector3(0, -.672f, 0f);
+            //    ballRb.velocity = Vector3.zero;
+            //    ballRb.useGravity = false;
+            //    inHands = true;
+            //}
+            //else if(inHands)
+            //{
+            //    ballCol.isTrigger = false ;
+            //    ballRb.useGravity = true; 
+            //    this.GetComponent<PlayerGrab>().enabled = false;
+            //    ball.transform.SetParent(null);
+            //    //ball.transform.localPosition = ballOriginalPosition;
+            //    ballRb.velocity = cam.transform.rotation * Vector3.forward * handPower;
+            //    inHands = false;
 
-            }
+            //}
             
 
         }

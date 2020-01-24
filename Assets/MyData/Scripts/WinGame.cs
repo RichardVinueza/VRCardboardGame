@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinGame : MonoBehaviour
 {
     public string levelName;
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
